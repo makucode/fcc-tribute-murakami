@@ -1,0 +1,152 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+p {
+    font-weight: 300;
+}
+
+.quote {
+    margin-top: 3.5rem;
+    margin-bottom: 4rem;
+    max-width: 80vw;
+    width: 80vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.quote p {
+    opacity: 0;
+    animation: headingIn 1.5s ease forwards 0.5s;
+}
+
+.quote span {
+    text-align: right;
+
+    opacity: 0;
+    animation: headingIn 2s ease forwards 1.5s;
+}
+
+#img-div {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 80vw;
+}
+
+#image {
+    max-width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    display: block;
+}
+
+#img-caption {
+    display: block;
+    text-align: center;
+    padding: 25px 4%;
+}
+
+#tribute-info {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 80vw;
+}
+
+.favorite-gallery {
+    max-width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    grid-column-gap: 30px;
+    margin-top: 4rem;
+}
+
+.gallery-item {
+    max-height: 100%;
+    max-width: 100%;
+
+    text-align: center;
+}
+
+.favorite-gallery img {
+    max-width: 100%;
+    max-height: 80%;
+}
+
+.gallery-item span {
+    display: block;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.tribute-link-content, .credits {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    max-width: 80vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+
+.tribute-link-content a, .credits a {
+    color: black;
+    text-decoration: none;
+
+    border-bottom: solid black 1px;
+    transition: all 0.3s ease;
+}
+
+.tribute-link-content a:hover, .credits a:hover {
+    border-bottom: solid #5e5e5e 1px;
+    color: #5e5e5e;
+}
+
+/* RESPONSIVENESS */
+
+@media only screen and (max-width: 600px) {
+    .favorite-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-gallery img {
+        width: 50%;
+    }
+}
+
+/* ANIMATIONS */
+
+@keyframes headingIn {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
